@@ -1,9 +1,6 @@
 This is a common JavaScript build system based on jQuery's build system.
 
-
 Code: git@github.com:abernier/js-common-build.git (forked from: http://github.com/jollytoad/js-common-build)
-
-Docs: http://www.adaptavist.com/display/jQuery/Build+System
 
 Features:
 

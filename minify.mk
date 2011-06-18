@@ -1,12 +1,17 @@
 
 MIN_DIR ?= ${DIST_DIR}/min
 
-MINIFY = java -jar ${BUILD_DIR}/yuicompressor-2.4.2.jar
+UGLIFYJS := $(shell which uglifyjs)
 
 MIN_FILES = $(notdir ${JS_CONCAT}) ${OPTIONAL_MODULES}
 MIN_OUT = $(addprefix ${MIN_DIR}/,$(patsubst %.js,%.min.js,${MIN_FILES}))
 
+ifdef UGLIFYJS
 minify: ${MIN_OUT}
+else
+minify:
+	@@echo "UglifyJS is not presetn on your system, you should: npm install uglify-js"
+endif
 
 ${MIN_DIR}:
 	@@echo "Creating minify directory:" ${MIN_DIR}
@@ -14,5 +19,5 @@ ${MIN_DIR}:
 
 ${MIN_OUT}: js optjs ${MIN_DIR}
 	@@echo "Minifying" $@
-	@@${MINIFY} -o $@ $(addprefix ${DIST_DIR}/,$(notdir $(patsubst %.min.js,%.js,$@)))
+	@@${UGLIFYJS} -o $@ $(addprefix ${DIST_DIR}/,$(notdir $(patsubst %.min.js,%.js,$@)))
 

@@ -55,7 +55,8 @@ include build/rules.mk
 ## Usage
 
 To jslint and build everything run:
-```
+
+```shell
 make
 ```
 
@@ -73,7 +74,8 @@ Common make targets are:
 * `clean` - remove the `DIST_DIR`
 
 Example, to build without a jslint check or minifying:
-```
+
+```shell
 make build
 ```
 

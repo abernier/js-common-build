@@ -23,8 +23,9 @@ Bonus:
 
 ## Adding it to your project
 
-1. Import the whole directory to a sub-dir of your project. 
-```
+1. Import the whole directory to a sub-dir of your project.
+
+```shell
 git submodule add git://github.com/jollytoad/js-common-build.git build
 ```
 

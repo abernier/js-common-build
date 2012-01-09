@@ -81,7 +81,7 @@ make build
 
 ### Optional variables
 
-You may also set any of the following variables in the Makefile:
+You may also set any of the following variables in the `Makefile`:
 
 * `SRC_DIR` - the source directory (default: `src`)
 * `BUILD_DIR` - the build system dir (default: `build`)

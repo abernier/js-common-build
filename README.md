@@ -32,6 +32,7 @@ git submodule add git://github.com/jollytoad/js-common-build.git build
  NOTE: ensure the file doesn't end with a line-break.
 
 3. Create a Makefile based on the following example:
+
 ```makefile
 PACKAGE = jquery-roles
 
@@ -114,8 +115,11 @@ Examples of use in the source code:
 
         ...
     }
-Then in the MODE_FILE:
+```
 
+Then in the `MODE_FILE`:
+
+```
 *DEBUG*
 *SAFE*
 ```
